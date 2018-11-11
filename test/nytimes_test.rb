@@ -16,7 +16,6 @@ class NytimesTest < Minitest::Test
   end
 
   def test_it_can_get_array_of_stories
-    #Set your code to the local variable, "result"
     result = @hash[:results]
     assert result.is_a? (Array)
     assert_equal 44, result.count
@@ -26,7 +25,6 @@ class NytimesTest < Minitest::Test
     result = @hash[:results].find_all do |key,value|
       key[:subsection] == "Politics"
     end
-    # binding.pry
 
     assert result.is_a? (Array)
     assert_equal 6, result.count
